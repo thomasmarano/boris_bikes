@@ -15,4 +15,4 @@ I'd like to see if a bike is working
 | Bike | working?|
 
 ##### How Objects Communicate with Messages
-Person :arrow_right: check_bike :arrow_right: Bike :arrow_right: working? :arrow_right: Person :arrow_right: use_bike :arrow_right: DockingStation :arrow_right: release_bike
+Please click [here](https://github.com/jesslns/boris_bikes/blob/master/objects_messages_diagram.jpg) to see the diagram.
