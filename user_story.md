@@ -14,5 +14,13 @@ I'd like to see if a bike is working
 | DockingStation | release_bike |
 | Bike | working?|
 
+
+| Objects | Messages |
+| ------- | :------: |
+| Person | return_bike, check_docking_station, |
+| DockingStation | dock_bike |
+| Bike | docked?|
+
+
 ##### How Objects Communicate with Messages
 Please click [here](https://github.com/jesslns/boris_bikes/blob/master/objects_messages_diagram.jpg) to see the diagram.

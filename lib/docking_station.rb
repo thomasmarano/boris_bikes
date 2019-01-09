@@ -1,7 +1,13 @@
 require_relative 'bike'
 
 class DockingStation
+  def initialize
+      @bbike
+  end
   def release_bike
-    Bike.new
+    @bbike
+  end
+  def dock_bike
+    @bbike
   end
 end
