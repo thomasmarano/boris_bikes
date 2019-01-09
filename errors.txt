@@ -14,3 +14,19 @@ Line number of error: 2
 This error appears when the code refers to a class or module that Ruby cannot find.
 
 The error can be solved by declaring a class constant.
+
+#### ch9
+bike.working?
+Traceback (most recent call last):
+        2: from /Users/jessicaleung/.rvm/rubies/ruby-2.5.1/bin/irb:11:in `<main>'
+        1: from (irb):6
+NoMethodError (undefined method `working?' for nil:NilClass)
+
+#### ch10
+2.5.1 :003 > station = DockingStation.new
+ => #<DockingStation:0x00007febac96d3a0> 
+2.5.1 :004 > bike = station.release_bike
+ => #<Bike:0x00007febac973e30> 
+2.5.1 :005 > bike.working?
+ => nil 
+
