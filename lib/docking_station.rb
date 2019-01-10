@@ -16,8 +16,4 @@ class DockingStation
       @docks.push(bike)
   end
 
-  def bike
-    @docks
-  end
-
 end
