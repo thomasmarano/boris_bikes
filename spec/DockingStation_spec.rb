@@ -7,6 +7,11 @@ describe DockingStation do
     DockingStation::DEFAULT_CAPACITY.times { subject.dock(Bike.new) }
     expect(subject.docks.length).to eql(DockingStation::DEFAULT_CAPACITY)
   end
+  it "defaults capacity to 20" do
+      station = DockingStation.new()
+      expect(station.capacity).to eql(20)
+  end
+
   describe '#release_bike' do
     it "releases a bike" do
       bike = Bike.new
