@@ -13,12 +13,9 @@ class DockingStation
       @docks.shift()
   end
 
-  def dock(bike, condition = "working")
+  def dock(bike)
       fail 'This dock is full' if full?
       @docks.push(bike)
-      if condition != "working"
-          bike.bike_broken
-      end
   end
 
 private

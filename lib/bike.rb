@@ -1,16 +1,15 @@
 class Bike
-  attr_accessor :condition
-  CONDITION = "working"
-  def initialize(condition = CONDITION)
-    @condition = condition
-  end
+  attr_reader :broken
   def working?
     true
   end
   def docked?
     true
   end
-  def bike_broken
-    @condition = "broken"
+  def report_broken
+    @broken = true
+  end
+  def broken?
+    @broken
   end
 end
