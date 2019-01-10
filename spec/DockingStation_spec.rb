@@ -12,9 +12,11 @@ describe DockingStation do
   end
 
   it 'docks something' do
-    bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+    testbike = Bike.new
+    subject.dock(testbike)
+    expect(subject.docks.last).to eql(testbike)
   end
+
   describe '#release_bike' do
     it "should return an error if docking station is empty" do
       expect { subject.release_bike }.to raise_error 'There are no bikes!'
@@ -22,15 +24,8 @@ describe DockingStation do
   end
   describe '#dock' do
   it "cannot accept bike if dock is full" do
-      subject.dock(Bike.new)
-      expect { subject.dock(Bike.new) }.to raise_error 'This dock is full'
+    20.times { subject.dock(Bike.new) }
+    expect { subject.dock(Bike.new) }.to raise_error 'This dock is full'
   end
 end
-
-
-  it 'returns docked bike' do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bike).to eq bike
-  end
 end
