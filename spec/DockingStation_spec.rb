@@ -3,6 +3,10 @@ describe DockingStation do
   it { is_expected.to respond_to :release_bike}
   it { is_expected.to respond_to(:docks) }
   it { is_expected.to respond_to(:dock).with(1).argument}
+  it "should return a capacity of 20" do
+    20.times { subject.dock(Bike.new) }
+    expect(subject.docks.length).to eql(20)
+  end
   describe '#release_bike' do
     it "releases a bike" do
       bike = Bike.new
