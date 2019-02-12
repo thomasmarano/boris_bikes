@@ -1,6 +1,7 @@
 language: ruby
   rvm:
     - 2.5.1
+
   deploy:
     provider: pages
     skip-cleanup: true
