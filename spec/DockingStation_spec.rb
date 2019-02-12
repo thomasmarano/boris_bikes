@@ -26,10 +26,6 @@ describe DockingStation do
     expect(subject.docks.last).to eql(testbike)
   end
 
-  it 'reports bike as broken on docking' do
-    station = DockingStation.new
-    expect(station.dock(Bike.new, "broken")).to eq "broken" #not sure this is the best test
-  end
 
   describe '#release_bike' do
     it "should return an error if docking station is empty" do
@@ -42,5 +38,8 @@ describe DockingStation do
     expect { subject.dock(Bike.new) }.to raise_error 'This dock is full'
   end
 end
-
+it "lets user set capacity when station is called" do
+  station = DockingStation.new(5)
+  expect(station.capacity).to eql(5)
+end
 end
